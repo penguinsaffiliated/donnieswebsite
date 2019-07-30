@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add article</title>
+  </head>
+  <body>
+    <form action="post">
+      <div>
+        <label for="title">Title</label>
+        <input
+          type="text"
+          name="title"
+          id="article-title"
+          placeholder="Title"
+          required
+        />
+      </div>
+      <div>
+        <label for="text">Text</label>
+        <input type="text" name="text" id="article-text" required />
+      </div>
+      <div>
+        <label for="tags">Tags (separate using ;)</label>
+        <br />
+        <input type="text" name="tags" id="article-tags" required />
+      </div>
+      <div>
+        <input type="submit" value="Save" />
+      </div>
+    </form>
+  </body>
+</html>

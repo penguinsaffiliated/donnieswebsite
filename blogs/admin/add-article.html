@@ -3,6 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
     <title>Add article</title>
   </head>
   <body>
@@ -23,7 +27,8 @@
       </div>
       <div>
         <label for="text">Text</label>
-        <input type="text" name="text" id="article-text" required />
+        <div type="text" name="text" id="article-text"></div>
+        
       </div>
       <div>
         <label for="tags">Tags (separate using ;)</label>
@@ -34,5 +39,14 @@
         <input type="submit" value="Save" />
       </div>
     </form>
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <!-- Initialize Quill editor -->
+    <script>
+      var quill = new Quill("#article-text", {
+        theme: "snow"
+      });
+    </script>
   </body>
 </html>
